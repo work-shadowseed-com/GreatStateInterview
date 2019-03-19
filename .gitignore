@@ -1,1 +1,5 @@
 .DS_Store
+.vs/*
+InterviewExerciseApi/bin/*
+InterviewExerciseApi/obj/*
+
