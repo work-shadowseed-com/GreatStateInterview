@@ -40,11 +40,13 @@ namespace InterviewExerciseApi.LiftEngine
             return data;
         }
 
-        // Calls a lift
-        public bool Call(int f)
+        // Calls a lift to current
+        public bool Call(int floor)
         {
-            var c = _lifts.Where(l => l.Status != "OutOfService").OrderBy(l => Math.Abs(l.CurrentFloor() - f)).First();
-            c.MoveTo(f);
+            // if lifts are all out of order
+            //  return false;
+            var liftToCall = _lifts.Where(lift => lift.Status != "OutOfService").OrderBy(lift => Math.Abs(lift.CurrentFloor() - floor)).First();
+            liftToCall.MoveTo(floor);
             return true;
         }
     }

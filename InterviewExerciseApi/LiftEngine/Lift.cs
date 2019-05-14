@@ -4,6 +4,7 @@ using Stateless;
 
 namespace InterviewExerciseApi.LiftEngine
 {
+    // 4. Identify the problem causing lifts to malfunction after they have been called once, and fix it.
     public class Lift : ILift
     {
         // Represents the State the lift is currently in
